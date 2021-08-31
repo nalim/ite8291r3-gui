@@ -1,0 +1,11 @@
+[Unit]
+Description=XMG Neo suspend actions
+Before=systemd-suspend.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/logger -t suspend -s "neo-suspend.service"
+ExecStart=/usr/bin/neo-sleep.sh "suspend"
+
+[Install]
+RequiredBy=systemd-suspend.service

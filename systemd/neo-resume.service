@@ -1,0 +1,13 @@
+[Unit]
+Description=XMG Neo resume actions
+After=systemd-suspend.service
+After=systemd-hibernate.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/logger -t suspend -s "neo-resume.service"
+ExecStart=/usr/bin/neo-sleep.sh "resume"
+
+[Install]
+RequiredBy=systemd-suspend.service
+RequiredBy=systemd-hibernate.service

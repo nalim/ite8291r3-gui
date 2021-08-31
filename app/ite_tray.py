@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import *
 from ite8291r3_ctl import ite8291r3
 import webbrowser
 import os
-import usb
 
 import signal
 signal.signal(signal.SIGINT, signal.SIG_DFL)

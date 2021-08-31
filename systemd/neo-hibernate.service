@@ -1,0 +1,11 @@
+[Unit]
+Description=XMG Neo hibernate actions
+Before=systemd-hibernate.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/logger -t hibernate -s "neo-hibernate.service"
+ExecStart=/usr/bin/neo-sleep.sh "hibernate"
+
+[Install]
+RequiredBy=systemd-hibernate.service

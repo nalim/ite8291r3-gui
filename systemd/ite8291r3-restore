@@ -1,0 +1,21 @@
+#!/bin/bash
+
+CTL_BIN=~/.local/bin/ite8291r3-ctl
+CTL_CFG=~/.config/ite8291r3-ctl
+
+[ -f $CTL_CFG ] || exit
+
+ctl_cfg_data=$(<$CTL_CFG)
+
+readarray -td, cfg <<<$ctl_cfg_data
+case ${cfg[0]} in
+	effect)
+		$CTL_BIN effect ${cfg[1]} --brightness ${cfg[2]}
+		;;
+	monocolor)
+		$CTL_BIN monocolor --name ${cfg[1]} --brightness ${cfg[2]}
+		;;
+	off)
+		$CTL_BIN off
+		;;
+esac
