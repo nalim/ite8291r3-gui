@@ -1,6 +1,6 @@
 # ite8291r3-gui
 
-**Tested on Tuxedo Stellaris 15**
+**Tested on Tuxedo Stellaris 15 and XMG Neo 17 E21**
 
 **Still in development!**
 
