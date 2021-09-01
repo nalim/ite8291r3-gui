@@ -23,6 +23,8 @@ $ bash install.sh
 @reboot /usr/local/bin/ite8291r3-ctl effect rainbow
 ```
 
+- You can install files from systemd folder to restore keyboard state after resume/hibernate (needs howto). 
+
 - Reboot
 
 
